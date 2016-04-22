@@ -1,0 +1,7 @@
+if (myFuncCalls == 21){
+         $('.container').html('<%= escape_javascript(render(:partial => @users)) %>');
+         myFuncCalls = 0;
+}else{
+	$('.container').append('<%= escape_javascript(render(:partial => @users)) %>');
+	myFuncCalls++;
+}
